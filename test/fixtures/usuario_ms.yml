@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  email: MyString
+  telefono: MyString
+  clave: MyString
+  calificacion: 1.5
+  rango: 1.5
+
+two:
+  nombre: MyString
+  email: MyString
+  telefono: MyString
+  clave: MyString
+  calificacion: 1.5
+  rango: 1.5

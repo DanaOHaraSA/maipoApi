@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  local: one
+  nombre: MyString
+  foto: MyText
+  calor: 1
+  descripcion: MyText
+  backline: MyText
+  largo: 1.5
+  ancho: 1.5
+
+two:
+  local: two
+  nombre: MyString
+  foto: MyText
+  calor: 1
+  descripcion: MyText
+  backline: MyText
+  largo: 1.5
+  ancho: 1.5
