@@ -4,7 +4,7 @@ class CreateSalas < ActiveRecord::Migration[5.0]
       t.references :local, foreign_key: true
       t.string :nombre
       t.text :foto
-      t.integer :calor
+      t.integer :valor
       t.text :descripcion
       t.text :backline
       t.float :largo

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161029191621) do
+ActiveRecord::Schema.define(version: 20161029232819) do
 
   create_table "implementos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer  "local_id"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20161029191621) do
     t.integer  "local_id"
     t.string   "nombre"
     t.text     "foto",        limit: 65535
-    t.integer  "valor"
+    t.float    "valor",       limit: 24
     t.text     "descripcion", limit: 65535
     t.text     "backline",    limit: 65535
     t.float    "largo",       limit: 24
