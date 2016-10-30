@@ -46,6 +46,6 @@ class SalasController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sala_params
-      params.require(:sala).permit(:local_id, :nombre, :foto, :calor, :descripcion, :backline, :largo, :ancho)
+      params.require(:sala).permit(:local_id, :nombre, :foto, :valor, :descripcion, :backline, :largo, :ancho)
     end
 end
