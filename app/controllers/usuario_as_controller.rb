@@ -16,11 +16,22 @@ class UsuarioAsController < ApplicationController
   # POST /usuario_as
   def create
     @usuario_a = UsuarioA.new(usuario_a_params)
-
     if @usuario_a.save
       render json: @usuario_a, status: :created, location: @usuario_a
     else
       render json: @usuario_a.errors, status: :unprocessable_entity
+    end
+  end
+
+  def autenticacion
+    @usuario_a = UsuarioA.where("email = ? && clave = ?", params[:email], params[:clave])
+
+    if @usuario_a.empty?
+    @temp  = "N"
+    render json: @temp
+    else
+    @temp = "Y"
+    render json: @temp
     end
   end
 
