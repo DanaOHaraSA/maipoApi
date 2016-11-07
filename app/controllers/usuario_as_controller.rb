@@ -27,10 +27,10 @@ class UsuarioAsController < ApplicationController
     @usuario_a = UsuarioA.where("email = ? && clave = ?", params[:email], params[:clave])
 
     if @usuario_a.empty?
-    @temp  = "N"
+    @temp  = {:is_valid => false}
     render json: @temp
     else
-    @temp = "Y"
+    @temp = {:is_valid => true}
     render json: @temp
     end
   end

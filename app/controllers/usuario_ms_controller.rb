@@ -13,6 +13,19 @@ class UsuarioMsController < ApplicationController
     render json: @usuario_m
   end
 
+  def autenticacion
+    @usuario_m = UsuarioM.where("email = ? && clave = ?", params[:email], params[:clave])
+
+    if @usuario_m.empty?
+    @temp  = {:is_valid => false}
+    render json: @temp
+    else
+    @temp = {:is_valid => true }
+
+    render json: @temp
+    end
+  end
+
   # POST /usuario_ms
   def create
     @usuario_m = UsuarioM.new(usuario_m_params)
