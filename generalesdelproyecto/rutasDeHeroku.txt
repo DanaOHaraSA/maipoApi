@@ -1,0 +1,25 @@
+Acceso a datos del musico
+
+https://delmaipoapi.herokuapp.com/usuario_ms/
+
+Acceso a datos del arrendador
+
+https://delmaipoapi.herokuapp.com/usuario_as/
+
+Acceder a datos del local
+
+https://delmaipoapi.herokuapp.com/locals/
+
+Acceder a datos de sala
+
+https://delmaipoapi.herokuapp.com/salas/
+
+Rutas especiales
+
+buscar implmentos de un local por el id del local
+
+https://delmaipoapi.herokuapp.com/implementos/implementosbylocal/localid
+
+buscar locales de un arrendador por el id del arrendado
+
+https://delmaipoapi.herokuapp.com/locals/localsbyarrendador/:usuario_a_id

@@ -23,17 +23,17 @@ class UsuarioAsController < ApplicationController
     end
   end
 
-  #def autenticacion
-  #  @usuario_a = UsuarioA.where("email = ? && clave = ?", params[:email], params[:clave])
+  def autenticacion
+    @usuario_a = UsuarioA.where("email = ? && clave = ?", params[:email], params[:clave])
 
-  #  if @usuario_a.empty?
-  #  @temp  = {:is_valid => false}
-  #  render json: @temp
-  #  else
-  #  @temp = {:id => @usuario_a[:id]}
-  #  render json: @temp
-  #  end
-  #  end
+    if @usuario_a.empty?
+    @temp  = {:is_valid => false}
+    render json: @temp
+    else
+    @temp = @usuario_a.as_json
+    render json: @temp
+    end
+  end
 
   # PATCH/PUT /usuario_as/1
   def update

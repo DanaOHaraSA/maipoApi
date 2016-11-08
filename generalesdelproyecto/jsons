@@ -1,0 +1,60 @@
+#formatos para json
+#Formato JSON para musico (usuario_ms)
+{
+    "nombre": "Israel Martinez",
+    "email": "israel.martinez@usach.cl",
+    "telefono": "97880523",
+    "clave": "123456",
+    "calificacion": 3,
+    "rango": 80,
+  }
+
+#Formato JSON para musico (usuario_as)
+
+{
+    "nombre": "Fernando Gaitan",
+    "email": "proyectodelmaipo@gmail.com",
+    "telefono": "952989263",
+    "clave": "123456",
+}
+
+#Formato JSON local
+
+{
+    "usuario_a_id": 1, #id del arrendador
+    "nombre": "DelMaipo",
+    "foto": "/dana/imagenes/7.png",
+    "calificacion": 5,
+    "descripcion": "descripcion de prueba 1",
+    "horario": "Lunes a viernes desde 09:30 a 19:00",
+    "direccion": "El belloto 3837",
+    "latitud": -33.4494,
+    "longitud": -70.6891,
+  },
+
+#formato json salas
+
+{
+    "local_id": 1,
+    "nombre": "Sala orquesta",
+    "foto": "/dana/imagenes/8.png",
+    "valor": 7000,
+    "descripcion": "descripcion de prueba 1",
+    "backline": "esto es un backline de prueba",
+    "largo": 5,
+    "ancho": 9,
+  }
+
+#formato json para implementos
+{
+  "local_id" : "1"
+  "nombre": "Super trombon mágico"
+  "marca" : "Ibañez"
+  "cantidad": 12
+
+}
+
+
+Repositorios de GitHub
+
+https://github.com/DanaOHaraSA/maipoApi.git
