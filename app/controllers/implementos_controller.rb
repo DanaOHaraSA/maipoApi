@@ -24,6 +24,12 @@ class ImplementosController < ApplicationController
     end
   end
 
+  def implementosbylocal
+    @implemento = Implemento.where("local_id = ?", params[:local_id])
+    render json: @implemento
+  end
+
+
   # PATCH/PUT /implementos/1
   def update
     if @implemento.update(implemento_params)

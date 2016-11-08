@@ -24,6 +24,11 @@ class LocalsController < ApplicationController
     end
   end
 
+  def localsbyarrendador
+    @local = Local.where("usuario_a_id = ?", params[:usuario_a_id])
+    render json: @local
+  end
+
   # PATCH/PUT /locals/1
   def update
     if @local.update(local_params)
