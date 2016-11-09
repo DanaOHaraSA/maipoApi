@@ -14,7 +14,7 @@ class UsuarioMsController < ApplicationController
   end
 
   def encuentra
-    @usuario_m = UsuarioM.where("email = ? && clave = ?", params[:email], params[:clave])
+    @usuario_m = UsuarioM.where('email = ? && clave = ?', params[:email], params[:clave])
     if @usuario_m.empty?
     @temp  = {:is_valid => false}
     render json: @temp
