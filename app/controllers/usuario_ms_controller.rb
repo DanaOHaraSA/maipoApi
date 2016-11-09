@@ -19,7 +19,7 @@ class UsuarioMsController < ApplicationController
     @temp  = {:is_valid => false}
     render json: @temp
     else
-    @temp = @usuario_m.as_json
+    @temp = {:is_valid => true}
     render json: @temp
     end
   end
