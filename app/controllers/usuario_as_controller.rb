@@ -23,7 +23,7 @@ class UsuarioAsController < ApplicationController
     end
   end
 
-  def autenticacion
+  def encuentra
     @usuario_a = UsuarioA.where("email = ? && clave = ?", params[:email], params[:clave])
 
     if @usuario_a.empty?

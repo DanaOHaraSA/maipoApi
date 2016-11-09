@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :usuario_as
   resources :usuario_ms
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post 'usuario_as/autenticacion', to: 'usuario_as#autenticacion'
-  post 'usuario_ms/autenticacion', to: 'usuario_ms#autenticacion'
+  post 'usuario_as/encuentra', to: 'usuario_as#encuentra'
+  post 'usuario_ms/encuentra', to: 'usuario_ms#encuentra'
   get 'salas/salasbylocal/:local_id', to: 'salas#salasbylocal'
   get 'implementos/implementosbylocal/:local_id', to: 'implementos#implementosbylocal'
   get 'locals/localsbyarrendador/:usuario_a_id', to: 'locals#localsbyarrendador'
