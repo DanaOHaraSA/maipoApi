@@ -24,7 +24,7 @@ class UsuarioAsController < ApplicationController
   end
 
   def encuentra
-    @usuario_a = UsuarioA.find(:all, :select => 'email', :condicions => ['email = ?', :email])
+    @usuario_a = UsuarioA.find(:all, :select => 'email', :conditions => ['email = ?', :email])
 
     if @usuario_a.empty?
     @temp  = {:is_valid => false}
