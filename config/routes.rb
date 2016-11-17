@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :add_details_to_salas
   resources :solicituds
   resources :implementos
   resources :salas
