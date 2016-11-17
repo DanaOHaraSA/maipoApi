@@ -24,14 +24,13 @@ class UsuarioAsController < ApplicationController
   end
 
   def encuentra
-    @usuario_a = UsuarioA.where('email = ? && clave = ?', params[:email], params[:clave])
+    @usuario_a = UsuarioA.select("id").where(["email = :email and clave = :clave", {email: params[:email], clave: params[:clave]}])
 
     if @usuario_a.empty?
     @temp  = {:is_valid => false}
     render json: @temp
     else
-    @temp = @usuario_a.as_json
-    render json: @temp
+    render json: @usuario_a
     end
   end
 
