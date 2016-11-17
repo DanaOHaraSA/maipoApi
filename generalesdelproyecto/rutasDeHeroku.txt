@@ -29,3 +29,12 @@ Loggin
 https://delmaipoapi.herokuapp.com/usuario_as/encuentra
 
 https://delmaipoapi.herokuapp.com/usuario_ms/encuentra
+#enviar mail y clave
+
+buscar solicitudes por id sala
+
+https://delmaipoapi.herokuapp.com/solicituds/solicitudbysala/:sala_id
+
+buscar solicitudes por id musico
+
+https://delmaipoapi.herokuapp.com/solicituds/solicitudbymusico/:usuario_m_id
