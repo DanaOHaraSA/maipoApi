@@ -8,6 +8,22 @@ class SolicitudsController < ApplicationController
     render json: @solicituds
   end
 
+  def solicitudbymusico
+
+    @solicitud = Solicitud.where("usuario_m_id = ?", params[:usuario_m_id])
+    render json: @solicitud
+
+  end
+
+  def solicitudbysala
+
+    @solicitud = Solicitud.where("sala_id = ?", params[:sala_id])
+    render json: @solicitud
+
+  end
+
+
+
   # GET /solicituds/1
   def show
     render json: @solicitud

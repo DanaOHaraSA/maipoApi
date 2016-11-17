@@ -23,3 +23,9 @@ https://delmaipoapi.herokuapp.com/implementos/implementosbylocal/localid
 buscar locales de un arrendador por el id del arrendado
 
 https://delmaipoapi.herokuapp.com/locals/localsbyarrendador/:usuario_a_id
+
+Loggin
+
+https://delmaipoapi.herokuapp.com/usuario_as/encuentra
+
+https://delmaipoapi.herokuapp.com/usuario_ms/encuentra
