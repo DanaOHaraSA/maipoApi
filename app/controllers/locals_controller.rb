@@ -15,7 +15,7 @@ class LocalsController < ApplicationController
 
   def arrendadorbysala
 
-    @local = Local.select("usuario_a_id").joins("INNER JOIN salas").where("locals.id = salas.local_id AND salas.id = ?", params[:id])
+    @local = Local.joins(:sala).select("usuario_a_id").where("salas.id = ?", params[:id])
     render json: @local
   end
 
