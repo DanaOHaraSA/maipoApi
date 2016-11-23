@@ -22,7 +22,10 @@ class SolicitudsController < ApplicationController
 
   end
 
+  def idArrendadrobyidsolicitud
+    
 
+  end
 
   # GET /solicituds/1
   def show

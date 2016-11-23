@@ -13,8 +13,7 @@ gem 'puma', '~> 3.0'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'jbuilder'
-gem 'rack-cors'
+gem 'paperclip', '~> 4.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

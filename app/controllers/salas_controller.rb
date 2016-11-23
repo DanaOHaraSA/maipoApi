@@ -27,7 +27,10 @@ class SalasController < ApplicationController
   def salasbylocal
     @sala = Sala.where("local_id = ?", params[:local_id])
     render json: @sala
-  end 
+  end
+
+
+
 
   # PATCH/PUT /salas/1
   def update
