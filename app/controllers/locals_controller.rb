@@ -16,10 +16,14 @@ class LocalsController < ApplicationController
   def arrendadorbysala
 
     @local = Local.joins(:sala).select("usuario_a_id").where("salas.id = ?", params[:id])
+
+    if @local.empty?
+      @isvalid = {:is_valid => false}
+      render json: @is_valid
+    else
     render json: @local
   end
-
-
+  end
 
 
 
