@@ -38,3 +38,8 @@ https://delmaipoapi.herokuapp.com/solicituds/solicitudbysala/:sala_id
 buscar solicitudes por id musico
 
 https://delmaipoapi.herokuapp.com/solicituds/solicitudbymusico/:usuario_m_id
+
+
+buscar id de arrendedor por id sala
+
+https://delmaipoapi.herokuapp.com/locals/arrendadorbysala/:sala_id
