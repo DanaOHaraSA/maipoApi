@@ -65,6 +65,6 @@ class LocalsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def local_params
-      params.require(:local).permit(:usuario_a_id, :nombre, :foto, :calificacion, :descripcion, :horario, :direccion, :latitud, :longitud)
+      params.require(:local).permit(:usuario_a_id, :nombre, :foto, :calificacion, :descripcion, :horario, :direccion, :latitud, :longitud, :foto_file_name, :foto_content_type, :foto_file_size, :foto_updated_at)
     end
 end
