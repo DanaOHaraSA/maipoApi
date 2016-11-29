@@ -33,10 +33,6 @@ ActiveRecord::Schema.define(version: 20161124195008) do
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
     t.float    "calificacion",      limit: 24,    default: 0.0
-    t.string   "foto_file_name"
-    t.string   "foto_content_type"
-    t.integer  "foto_file_size"
-    t.datetime "foto_updated_at"
     t.index ["usuario_a_id"], name: "index_locals_on_usuario_a_id", using: :btree
   end
 
