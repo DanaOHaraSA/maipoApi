@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   get 'solicituds/solicitudbymusico/:usuario_m_id', to: 'solicituds#solicitudbymusico'
   get 'solicituds/solicitudbysala/:sala_id', to: 'solicituds#solicitudbysala'
   get 'locals/arrendadorbysala/:id', to: 'locals#arrendadorbysala'
+  #get 'salas/borarsalasbylocal/local_id', to: 'salas#borarsalasbylocal'
+  #delete 'implementos/borarimplementosbylocal/local_id', to: 'implementos#borarimplementosbylocal'
 
 end

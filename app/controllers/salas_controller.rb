@@ -30,8 +30,6 @@ class SalasController < ApplicationController
   end
 
 
-
-
   # PATCH/PUT /salas/1
   def update
     if @sala.update(sala_params)
@@ -40,6 +38,12 @@ class SalasController < ApplicationController
       render json: @sala.errors, status: :unprocessable_entity
     end
   end
+
+
+#  def borarsalasbylocal
+#    @salas = Sala.where("local_id = ?", params[:local_id]);
+#    @salas.destroy
+#  end
 
   # DELETE /salas/1
   def destroy

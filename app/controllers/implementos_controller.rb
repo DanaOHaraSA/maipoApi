@@ -29,6 +29,12 @@ class ImplementosController < ApplicationController
     render json: @implemento
   end
 
+  #def borarimplementosbylocal
+  #  @implementos = Implemento.where("local_id = ?", params[:local_id])
+  #  @implementos.destroy
+  # end
+
+
 
   # PATCH/PUT /implementos/1
   def update
