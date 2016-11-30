@@ -7,9 +7,3 @@ class DeleteColumnsFromSolicituds < ActiveRecord::Migration[5.0]
     remove_column :solicituds, :imagen_updated_at, :datetime
   end
 end
-
-
-"imagen_file_name": null,
-  "imagen_content_type": null,
-  "imagen_file_size": null,
-  "imagen_updated_at": nul
