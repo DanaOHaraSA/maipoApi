@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130134056) do
+ActiveRecord::Schema.define(version: 20161130141123) do
 
   create_table "implementos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer  "local_id"
@@ -69,6 +69,9 @@ ActiveRecord::Schema.define(version: 20161130134056) do
     t.integer  "year"
     t.integer  "dia"
     t.string   "visto"
+    t.integer  "mes"
+    t.integer  "beginhour"
+    t.integer  "endhour"
     t.index ["implemento_id"], name: "index_solicituds_on_implemento_id", using: :btree
     t.index ["sala_id"], name: "index_solicituds_on_sala_id", using: :btree
     t.index ["usuario_m_id"], name: "index_solicituds_on_usuario_m_id", using: :btree
