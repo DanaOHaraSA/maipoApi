@@ -40,10 +40,6 @@ class SalasController < ApplicationController
   end
 
 
-#  def borarsalasbylocal
-#    @salas = Sala.where("local_id = ?", params[:local_id]);
-#    @salas.destroy
-#  end
 
   # DELETE /salas/1
   def destroy
@@ -58,6 +54,6 @@ class SalasController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sala_params
-      params.require(:sala).permit(:local_id, :nombre, :foto, :valor, :descripcion, :backline, :largo, :ancho, :foto_file_name, :foto_content_type, :foto_file_size, :foto_updated_at)
+      params.require(:sala).permit(:local_id, :nombre, :foto, :valor, :descripcion, :backline, :largo, :ancho, :foto_file_name, :foto_content_type, :foto_file_size, :foto_updated_at, :visible)
     end
 end

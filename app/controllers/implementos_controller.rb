@@ -58,6 +58,6 @@ class ImplementosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def implemento_params
-      params.require(:implemento).permit(:local_id, :nombre, :marca, :cantidad)
+      params.require(:implemento).permit(:local_id, :nombre, :marca, :cantidad,:visible )
     end
 end

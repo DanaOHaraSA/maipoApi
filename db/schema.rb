@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130141123) do
+ActiveRecord::Schema.define(version: 20161130221523) do
 
   create_table "implementos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer  "local_id"
     t.string   "nombre"
     t.string   "marca"
     t.integer  "cantidad"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.boolean  "visible",    default: true
     t.index ["local_id"], name: "index_implementos_on_local_id", using: :btree
   end
 
@@ -30,13 +31,14 @@ ActiveRecord::Schema.define(version: 20161130141123) do
     t.text     "direccion",         limit: 65535
     t.float    "latitud",           limit: 24
     t.float    "longitud",          limit: 24
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.float    "calificacion",      limit: 24,    default: 0.0
     t.string   "foto_file_name"
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+    t.boolean  "visible",                         default: true
     t.index ["usuario_a_id"], name: "index_locals_on_usuario_a_id", using: :btree
   end
 
@@ -49,13 +51,14 @@ ActiveRecord::Schema.define(version: 20161130141123) do
     t.text     "backline",          limit: 65535
     t.float    "largo",             limit: 24
     t.float    "ancho",             limit: 24
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.text     "roomCalendarUrl",   limit: 65535
     t.string   "foto_file_name"
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+    t.boolean  "visible",                         default: true
     t.index ["local_id"], name: "index_salas_on_local_id", using: :btree
   end
 

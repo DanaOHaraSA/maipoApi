@@ -65,6 +65,7 @@ class SolicitudsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def solicitud_params
-      params.require(:solicitud).permit(:usuario_m_id, :sala_id, :implemento_id, :estado, :year, :dia, :visto)
+      params.require(:solicitud).permit(:usuario_m_id, :sala_id, :implemento_id, :estado, :year, :dia, :visto, :mes, :beginhour, :endhour)
+
     end
 end
