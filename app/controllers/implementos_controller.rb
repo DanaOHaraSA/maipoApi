@@ -3,7 +3,7 @@ class ImplementosController < ApplicationController
 
   # GET /implementos
   def index
-    @implementos = Implemento.all
+    @implementos = Implemento.where(:visible => true)
 
     render json: @implementos
   end
@@ -25,7 +25,7 @@ class ImplementosController < ApplicationController
   end
 
   def implementosbylocal
-    @implemento = Implemento.where("local_id = ?", params[:local_id])
+    @implemento = Implemento.where("local_id = ? AND visible = true", params[:local_id])
     render json: @implemento
   end
 

@@ -3,7 +3,7 @@ class SalasController < ApplicationController
 
   # GET /salas
   def index
-    @temp = Sala.all()
+    @temp = Sala.where(:visible => true)
     @salas = @temp.order(:valor)
     render json: @salas
   end
@@ -25,7 +25,7 @@ class SalasController < ApplicationController
   end
 
   def salasbylocal
-    @sala = Sala.where("local_id = ?", params[:local_id])
+    @sala = Sala.where("local_id = ? AND visible = true", params[:local_id])
     render json: @sala
   end
 

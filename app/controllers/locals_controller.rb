@@ -3,7 +3,7 @@ class LocalsController < ApplicationController
 
   # GET /locals
   def index
-    @locals = Local.all
+    @locals = Local.where(:visible => true)
 
     render json: @locals
   end
@@ -15,7 +15,7 @@ class LocalsController < ApplicationController
 
   def arrendadorbysala
 
-    @local = Local.joins(:sala).select("usuario_a_id").where("salas.id = ?", params[:id])
+    @local = Local.joins(:sala).select("usuario_a_id").where("salas.id = ? AND visible = true", params[:id])
 
     if @local.empty?
       @isvalid = {:is_valid => false}
@@ -39,7 +39,7 @@ class LocalsController < ApplicationController
   end
 
   def localsbyarrendador
-    @local = Local.where("usuario_a_id = ?", params[:usuario_a_id])
+    @local = Local.where("usuario_a_id = ? AND visible = true", params[:usuario_a_id])
     render json: @local
   end
 
