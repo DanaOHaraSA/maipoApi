@@ -57,6 +57,14 @@ class SolicitudsController < ApplicationController
     @solicitud.destroy
   end
 
+  def solicitudesporidlocal
+    @solicitud = Solicitud.joins(:sala).where("salas.local_id = ? AND salas.visible = true", params[:local_id])
+    render json: @solicitud
+  end
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_solicitud

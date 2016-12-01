@@ -43,6 +43,7 @@ class LocalsController < ApplicationController
     render json: @local
   end
 
+
   # PATCH/PUT /locals/1
   def update
     if @local.update(local_params)
