@@ -22,11 +22,6 @@ class SolicitudsController < ApplicationController
 
   end
 
-  def idArrendadrobyidsolicitud
-
-
-  end
-
   # GET /solicituds/1
   def show
     render json: @solicitud
@@ -61,8 +56,6 @@ class SolicitudsController < ApplicationController
     @solicitud = Solicitud.joins(:sala).where("salas.local_id = ? AND salas.visible = true", params[:local_id])
     render json: @solicitud
   end
-
-
 
 
   private

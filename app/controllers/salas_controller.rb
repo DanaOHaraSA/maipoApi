@@ -29,6 +29,12 @@ class SalasController < ApplicationController
     render json: @sala
   end
 
+  def solicitdesporidarrendador
+    @sala = Sala.joins(:solicitud, :local).select("solicituds.*").where("locals.usuario_a_id = usuario_a_id AND locals.id = salas.local_id AND salas.id = solicituds.sala_id AND solicituds.estado = estado AND salas.visible = true",{usuario_a_id: params[:usuario_a_id], visible: params[:visible]})
+    render json: @sala
+  end
+
+
 
   # PATCH/PUT /salas/1
   def update
