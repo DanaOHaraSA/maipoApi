@@ -57,6 +57,10 @@ class SolicitudsController < ApplicationController
     render json: @solicitud
   end
 
+  def solicitudesporidmusico
+    @solicitud = Solicitud.where("solicituds.usuario_m_id = usuario_m_id AND solicituds.estado = estado",{usuario_m_id: params[:usuario_m_id], estado: params[:estado]})
+    render json: @solicitud
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

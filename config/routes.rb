@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   #delete 'implementos/borarimplementosbylocal/local_id', to: 'implementos#borarimplementosbylocal'
   get 'solicituds/solicitudesporidlocal/:local_id', to: 'solicituds#solicitudesporidlocal'
   get 'salas/solicitdesporidarrendador/:usuario_a_id/:estado', to: 'salas#solicitdesporidarrendador'
-
+  get 'solicituds/solicitudesporidmusico/:usuario_m_id/:estado', to: 'solicituds#solicitudesporidmusico'
 end
