@@ -60,6 +60,6 @@ class SalasController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sala_params
-      params.require(:sala).permit(:local_id, :nombre, :foto, :valor, :descripcion, :backline, :largo, :ancho, :roomCalendarUrl, :foto_file_name, :foto_content_type, :foto_file_size, :foto_updated_at, :visible)
+      params.require(:sala).permit(:local_id, :nombre, :foto, :valor, :descripcion, :backline, :largo, :ancho, :roomCalendarUrl, :foto_file_name, :foto_content_type, :foto_file_size, :foto_updated_at, :visible, :imagenUrl)
     end
 end
