@@ -30,7 +30,7 @@ class SalasController < ApplicationController
   end
 
   def solicitdesporidarrendador
-    @sala = Sala.joins(:solicitud, :local).select("solicituds.*").where("locals.usuario_a_id = usuario_a_id AND locals.id = salas.local_id AND salas.id = solicituds.sala_id AND solicituds.estado = estado AND salas.visible = true",{usuario_a_id: params[:usuario_a_id], visible: params[:visible]})
+    @sala = Sala.joins(:solicitud, :local).where("locals.usuario_a_id = :usuario_a_id and solicituds.estado = :estado ", {usuario_a_id: params[:usuario_a_id], estado: params[:estado]}).select("solicituds.*")
     render json: @sala
   end
 
