@@ -53,13 +53,23 @@ class SolicitudsController < ApplicationController
   end
 
   def solicitudesporidlocal
-    @solicitud = Solicitud.joins(:sala).where("salas.local_id = ? AND salas.visible = true", params[:local_id])
+    @solicitud = Solicitud.joins(:sala).where("salas.local_id = ? and salas.visible = true", params[:local_id])
+    if @solicitud.empty?
+    @temp  = {:is_valid => false}
+    render json: @temp
+    else
     render json: @solicitud
+    end
   end
 
   def solicitudesporidmusico
-    @solicitud = Solicitud.where("solicituds.usuario_m_id = usuario_m_id AND solicituds.estado = estado",{usuario_m_id: params[:usuario_m_id], estado: params[:estado]})
+    @solicitud = Solicitud.where("usuario_m_id = :usuario_m_id and estado = :estado",{usuario_m_id: params[:usuario_m_id], estado: params[:estado]})
+    if @solicitud.empty?
+    @temp  = {:is_valid => false}
+    render json: @temp
+    else
     render json: @solicitud
+    end
   end
 
   private
