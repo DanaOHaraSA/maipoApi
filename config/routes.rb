@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get 'solicituds/solicitudesporidlocal/:local_id', to: 'solicituds#solicitudesporidlocal'
   get 'salas/solicitdesporidarrendador/:usuario_a_id/:estado', to: 'salas#solicitdesporidarrendador'
   get 'solicituds/solicitudesporidmusico/:usuario_m_id/:estado', to: 'solicituds#solicitudesporidmusico'
+  get 'salas/solicitdesporidarrendadortodas/:usuario_a_id', to: 'salas#solicitdesporidarrendadortodas'
 end
