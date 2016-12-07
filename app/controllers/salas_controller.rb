@@ -39,15 +39,6 @@ class SalasController < ApplicationController
     end
   end
 
-  def solicitdesporidarrendadortodas
-    @sala = Sala.joins(:solicitud, :local).where("locals.usuario_a_id = :usuario_a_id and salas.visible = true ", {usuario_a_id: params[:usuario_a_id]}).select("solicituds.*")
-    if @sala.empty?
-        @temp  = {:is_valid => false}
-        render json: @temp
-    else
-    render json: @sala
-    end
-  end
 
 
 

@@ -49,6 +49,15 @@ buscar solicitudes por id local
 
 https://delmaipoapi.herokuapp.com/solicituds/solicitudesporidlocal/:local_id
 
-buscar solicitudes por id de arrendador
+buscar solicitudes por id de arrendador y estado
 
 https://delmaipoapi.herokuapp.com/salas/solicitdesporidarrendador/:usuario_a_id/:estado
+
+
+solicitude por id musico y estado
+
+https://delmaipoapi.herokuapp.com/solicituds/solicitudesporidmusico/:usuario_m_id/:estado'
+
+solicitudes solo por id musico
+
+https://delmaipoapi.herokuapp.com/solicituds/solicitudesporidmusico/:usuario_m_id

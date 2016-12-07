@@ -72,6 +72,18 @@ class SolicitudsController < ApplicationController
     end
   end
 
+  def solicitdesporidmusicotodas
+    @solicitud = Solicitud.where("usuario_m_id = :usuario_m_id",{usuario_m_id: params[:usuario_m_id]})
+    if @solicitud.empty?
+    @temp  = {:is_valid => false}
+    render json: @temp
+    else
+    render json: @solicitud
+    end
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_solicitud
